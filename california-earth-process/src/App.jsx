@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import HomePage from "./HomePage";
 import EarthProcesses from "./EarthProcesses";
-import References from "./Refrences";
+import References from "./References";
 
 export default function App() {
   return (
