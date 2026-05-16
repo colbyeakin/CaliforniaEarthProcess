@@ -6,6 +6,16 @@
      Typography
   ========================= */
   --font-primary: 'Outfit', sans-serif;
+  --font-size-body: clamp(1rem, 0.96rem + 0.2vw, 2rem);
+  --font-size-body-lg: clamp(1rem, 0.86rem + 0.75vw, 1.375rem);
+  --font-size-h1: clamp(2rem, 1.45rem + 2vw, 3.25rem);
+  --font-size-h2: clamp(1.55rem, 1.2rem + 1.35vw, 2.35rem);
+  --font-size-h3: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+  --font-size-nav: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  --font-size-card-title: clamp(1.1rem, 0.95rem + 0.55vw, 1.4rem);
+  --font-size-card-kicker: clamp(0.8rem, 0.76rem + 0.22vw, 0.9rem);
+  --font-size-caption: clamp(0.85rem, 0.81rem + 0.2vw, 0.95rem);
+  --font-size-hero-subtitle: clamp(1rem, 0.82rem + 0.9vw, 1.375rem);
 
   /* =========================
      California Earth Palette
@@ -71,15 +81,35 @@
 
 body {
   font-family: var(--font-primary);
+  font-size: var(--font-size-body);
   background: var(--background);
   color: var(--text-primary);
   margin: 0;
   padding: 0;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
 }
 
 /* =========================
@@ -125,12 +155,201 @@ button:hover {
    Sections
 ========================= */
 
-.section-earth {
-  border-left: 5px solid var(--sierra-forest);
+#maps {
+  display: grid;
+  row-gap: 20px;
 }
 
-.section-process {
-  color: var(--desert-clay);
+#maps > h2 {
+  margin: 0;
+}
+
+/* Maps Subsections */
+.maps-subsection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  column-gap: 40px;
+  align-items: start;
+}
+
+.maps-subsection-copy {
+  grid-column: 1;
+}
+
+.maps-subsection-copy h3 {
+  margin: 0 0 16px;
+}
+
+.maps-subsection-copy p {
+  margin: 0;
+  font-size: var(--font-size-body);
+}
+
+.maps-subsection-copy p + p {
+  margin-top: 16px;
+}
+
+.maps-subsection-media-shell {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  display: grid;
+  align-items: start;
+}
+
+.maps-subsection-media-shell--carousel {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 56px;
+  gap: 16px;
+  align-items: center;
+}
+
+.maps-subsection-media {
+  position: relative;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin: 0;
+  background: linear-gradient(180deg, rgba(16, 37, 66, 0.08), rgba(16, 37, 66, 0.18));
+  border: 1px solid rgba(16, 37, 66, 0.12);
+  box-shadow: var(--shadow-md);
+}
+
+.maps-subsection-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-nav {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--deep-ocean);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.35rem;
+  padding: 0;
+}
+
+.carousel-nav:hover,
+.carousel-nav:focus-visible {
+  transform: scale(1.05);
+  opacity: 1;
+  background: white;
+}
+
+.carousel-nav:focus-visible,
+.carousel-dot:focus-visible {
+  outline: 2px solid var(--golden-hour);
+  outline-offset: 3px;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 24px 24px 52px;
+  color: var(--text-light);
+  background: linear-gradient(180deg, rgba(16, 37, 66, 0), rgba(16, 37, 66, 0.88));
+  font-size: var(--font-size-caption);
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.image-carousel:hover .carousel-caption,
+.image-carousel:focus-within .carousel-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(16, 37, 66, 0.18);
+}
+
+.carousel-dot:hover,
+.carousel-dot:focus-visible {
+  transform: scale(1.15);
+  opacity: 1;
+  background: white;
+}
+
+.carousel-dot.is-active {
+  background: var(--golden-hour);
+  border-color: var(--golden-hour);
+  box-shadow: 0 0 0 4px rgba(224, 164, 88, 0.18);
+}
+
+.prev-btn {
+  grid-column: 1;
+}
+
+.next-btn {
+  grid-column: 3;
+}
+
+.cartographers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cartographer-bio-card {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  text-align: center;
+}
+
+.cartographer-image {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+}
+
+.cartographer-name {
+  font-size: var(--font-size-h2);
+  margin: 16px 0 8px;
+}
+
+.cartographer-date {
+  font-size: var(--font-size-card-kicker);
+  color: var(--golden-hour);
+  margin: 0 0 16px;
+}
+
+.cartographer-description {
+  font-size: var(--font-size-body);
+  margin: 0;
 }
 
 /* =========================
@@ -158,6 +377,7 @@ button:hover {
 .nav-link {
   text-decoration: none;
   color: var(--text-primary);
+  font-size: var(--font-size-nav);
   font-weight: 500;
 
   transition: 0.25s ease;
@@ -225,7 +445,7 @@ button:hover {
 .hero-section p {
   top: 58%;
 
-  font-size: 22px;
+  font-size: var(--font-size-hero-subtitle);
 
   color: var(--sandstone);
 
@@ -252,7 +472,7 @@ button:hover {
 
 .about-content {
   grid-column: 1;
-  font-size: 22px;
+  font-size: var(--font-size-body-lg);
 }
 
 .about-image {
@@ -351,7 +571,7 @@ button:hover {
 
   color: white;
 
-  font-size: 1.4rem;
+  font-size: var(--font-size-card-title);
   font-weight: 600;
 
   line-height: 1.3;
@@ -372,7 +592,7 @@ button:hover {
 
   color: var(--golden-hour);
 
-  font-size: 0.9rem;
+  font-size: var(--font-size-card-kicker);
   font-weight: 500;
 
   letter-spacing: 1px;
@@ -391,9 +611,12 @@ button:hover {
   padding: 40px;
 }
 
-.earth-section {
+.earth-processes section > h2 {
   scroll-margin-top: 110px;
-  padding: 24px 0;
+}
+
+.earth-section {
+  padding: 40px 0;
 }
 
 /* =========================
@@ -403,4 +626,43 @@ button:hover {
   padding: 40px;
 }
 
+@media (max-width: 1200px) {
+  .section-about {
+    grid-template-columns: 1fr;
+  }
 
+  .about-image {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .maps-subsection {
+    grid-template-columns: 1fr;
+  }
+
+  .maps-subsection-media-shell {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .maps-subsection-media-shell--carousel {
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 10px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption {
+    padding: 18px 18px 46px;
+  }
+}
