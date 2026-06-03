@@ -18,6 +18,12 @@ import Mt_Lassen from "./assets/Mt-Lassen.jpg";
 import Sierra_Nevada from "./assets/Sierra-Nevada.jpg";
 import Gold from "./assets/Gold.jpg";
 import Gold_Rush_Mining from "./assets/Gold_Rush.jpg";
+import CA_Cliffs from "./assets/CA_Cliffs.jpg";
+import Montecito_Mudslide from "./assets/Montecito.jpg";
+import Sac_River from "./assets/Sac_River.jpg";
+import Mojave_Desert from "./assets/Mojave_Desert.jpg";
+import Yosemite from "./assets/Yosemite.jpg";
+import Sierra_Glacier from "./assets/Sierra_Nevada_Glacier.jpg"
 
 
 const mapSlides = [
@@ -472,7 +478,101 @@ export default function EarthProcesses() {
 
       <section id="weathering" className="earth-section">
         <h2>Weathering, Mass Wasting, and Erosion</h2>
-        <p>Placeholder content for Weathering, Mass Wasting, and Erosion.</p>
+        <section className="weathering-section">
+          <h3>Weathering & Landscape Change</h3>
+          <div className="weathering-subsection">
+            <p>
+              With such a broad landscape, California is constantly being changed by weathering 
+              and mass wasting. During the winter months, California experiences mass wasting and 
+              landslides because of the rainfall. Waves from the ocean are responsible for costal 
+              mass movement and cliff collapse.
+            </p>
+          </div>
+          <div className="weathering-media">
+            <img src={CA_Cliffs} alt="California Cliffs" />
+            <p className="caption">California Cliffs, an example of coastal mass movement</p>
+          </div>
+
+          <div className="weathering-subsection">
+              <p>
+                One of the major mudslides was in Montecito California. On Jan 9, 2018, mud and 
+                boulders began plowing down the Santa Barbara hillsides. The mudslide was a result 
+                of a short-lived, but torrential downpour of an overnight storm. The mudslide was 
+                15 feet deep which destroyed many homes with a total of 23 people that died in the 
+                incident.
+              </p>
+              <p>
+                The government has improved building codes and cautioned against building in these 
+                areas, especially beach cliffs. Those cliffs are a big area of danger for landslides 
+                and so many houses on these cliffs have either been vacated or torn down to prevent 
+                any further destruction.
+              </p>
+          </div>
+          <div className="weathering-media">
+            <img src={Montecito_Mudslide} alt="Montecito Mudslide" />
+            <p className="caption">Montecito Mudslide, a devastating natural disaster in California</p>
+          </div>
+        </section>
+
+        <section className="fluvial-section">
+          <h3>Rivers & Water Erosion</h3>
+          <div className="fluvial-subsection">
+            <p>
+              The Sacramento River is located in the Lower Sacramento Basin. It’s the largest river in 
+              the state of California by flow, length, and drainage area. The Sacramento River meets the 
+              San Joaquin River, just south of Sacramento, where they merge into the Sacramento-San Joaquin 
+              Delta. The Delta then drains into the San Francisco Bay and the Pacific Ocean.
+            </p>
+            <p>
+              This river is very crucial in supporting civilization as much of the land in Sacramento is 
+              used for agriculture. The land used covers about 2,160,000 acres. EPA is tracking progress 
+              to restore watersheds and water quality throughout nation, including California.
+            </p>
+          </div>
+          <div className="weathering-media">
+            <img src={Sac_River} alt="Sacramento River" />
+            <p className="caption">Sacramento River, a crucial river for California's agriculture</p>
+          </div>
+        </section>
+
+        <section className="climate-section">
+          <h3>Deserts, Wind, & Glacial Landscapes</h3>
+          <div className="climate-subsection">
+            <p>
+              The Mojave Desert extends throughout southeastern California and southern Nevada. 
+              The desert contains Death Valley National Park, which is the hottest, driest, and 
+              lowest point in North America. The desert has been shaped through deflation and abrasion. 
+              The local air quality create unique formations like yardangs, which are wind-carved landforms. 
+              The desert affects the drought that is ongoing in the state of California.
+            </p>
+            <div className="weathering-media">
+              <img src={Mojave_Desert} alt="Mojave Desert" />
+              <p className="caption">Mojave Desert, a unique desert landscape in California</p>
+            </div>
+          </div>
+          <div>
+            <p>
+              Yosemite National Park was formed from glacial erosion of the underlying granite. 
+              Many of the mountain ranges in Yosemite have been changed by many different forces 
+              including water, ice, and daily temperature changes. These amazing mountain ranges 
+              and valleys provide amazing tourist spots and enrich the state with scenic landscapes.
+            </p>
+            <p>
+              Along with Yosemite, the Sierra Mountains contain many glaciers still forming the range 
+              today. The glaciers are an important source of water that feeds many of the rivers throughout 
+              the state. Along with feeding the rivers, these glaciers help maintain the water storage in 
+              California, which is crucial since many of the urban areas are located in the desert regions.
+            </p>
+            <div className="weathering-media">
+              <img src={Yosemite} alt="Yosemite National Park" />
+              <p className="caption">Yosemite National Park, a stunning example of glacial erosion in California</p>
+            </div>
+            <div className="weathering-media">
+              <img src={Sierra_Glacier} alt="Sierra Nevada Glacier" />
+              <p className="caption">Sierra Nevada Glacier, an important water source for California</p>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section id="fluvial" className="earth-section">

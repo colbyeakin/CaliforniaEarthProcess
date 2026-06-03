@@ -483,6 +483,112 @@ button:hover {
   border-radius: var(--radius-md);
 }
 
+.weathering-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 24px;
+  align-items: start;
+}
+
+.weathering-section h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 16px;
+}
+
+.weathering-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.weathering-subsection p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.weathering-subsection p + p {
+  margin-top: 14px;
+}
+
+.weathering-media {
+  grid-column: 2;
+  margin: 0;
+}
+
+.weathering-media img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-md);
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+}
+
+/* Fluvial (Rivers, Oceans) and Climate sections */
+.fluvial-section,
+.climate-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 40px;
+  align-items: start;
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.fluvial-section h3,
+.climate-section h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 16px;
+}
+
+.fluvial-subsection,
+.climate-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fluvial-media,
+.climate-media {
+  grid-column: 2;
+  margin: 0;
+}
+
+.fluvial-media img,
+.climate-media img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-md);
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .fluvial-section,
+  .climate-section {
+    grid-template-columns: 1fr;
+  }
+
+  .fluvial-media,
+  .climate-media {
+    grid-column: 1;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .weathering-section {
+    grid-template-columns: 1fr;
+  }
+
+  .weathering-media {
+    grid-column: 1;
+    margin-top: 8px;
+  }
+}
+
+
+
 /* =========================
    Navigation
 ========================= */

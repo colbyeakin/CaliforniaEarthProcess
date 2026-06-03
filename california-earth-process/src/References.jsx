@@ -16,6 +16,9 @@ export default function References() {
     "Encyclopaedia Britannica. (n.d.). Lassen Peak. Britannica. https://www.britannica.com/place/Lassen-Peak",
     "Public Broadcasting Service. (n.d.). California gold rush. American Experience. https://www.pbs.org/wgbh/americanexperience/features/goldrush-california/",
     "California Department of Conservation. (n.d.). Mineral resources in California. California Geological Survey. https://www.conservation.ca.gov/cgs/minerals/resources",
+    "National Park Service. (n.d.). Geology of Yosemite National Park. U.S. Department of the Interior. https://www.nps.gov/yose/learn/nature/geology.htm",
+    "California Governor's Office of Emergency Services. (2023, January 9). Montecito mudslides anniversary: Reflections through images. https://www.news.caloes.ca.gov/montecito-mudslides-anniversary-reflections-through-images/",
+    "U.S. Environmental Protection Agency. (n.d.). Feather and Sacramento rivers watersheds. https://www.epa.gov/sfbay-delta/feather-and-sacramento-rivers-watersheds"
   ].sort();
   return (
     <div className="references">
