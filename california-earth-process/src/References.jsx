@@ -18,7 +18,10 @@ export default function References() {
     "California Department of Conservation. (n.d.). Mineral resources in California. California Geological Survey. https://www.conservation.ca.gov/cgs/minerals/resources",
     "National Park Service. (n.d.). Geology of Yosemite National Park. U.S. Department of the Interior. https://www.nps.gov/yose/learn/nature/geology.htm",
     "California Governor's Office of Emergency Services. (2023, January 9). Montecito mudslides anniversary: Reflections through images. https://www.news.caloes.ca.gov/montecito-mudslides-anniversary-reflections-through-images/",
-    "U.S. Environmental Protection Agency. (n.d.). Feather and Sacramento rivers watersheds. https://www.epa.gov/sfbay-delta/feather-and-sacramento-rivers-watersheds"
+    "U.S. Environmental Protection Agency. (n.d.). Feather and Sacramento rivers watersheds. https://www.epa.gov/sfbay-delta/feather-and-sacramento-rivers-watersheds",
+    "Redwood Coast Tsunami Work Group. (n.d.). 1964 Great Alaska earthquake tsunami. https://rctwg.humboldt.edu/1964-great-alaska-earthquake-tsunami",
+    "National Park Service. (n.d.). Currents and upwelling. U.S. Department of the Interior. https://www.nps.gov/chis/learn/nature/currents-upwelling.htm",
+    "Legislative Analyst's Office. (2022). California's flood management system (Report No. 4618). State of California. https://lao.ca.gov/Publications/Report/4618"
   ].sort();
   return (
     <div className="references">

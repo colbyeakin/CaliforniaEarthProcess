@@ -24,6 +24,10 @@ import Sac_River from "./assets/Sac_River.jpg";
 import Mojave_Desert from "./assets/Mojave_Desert.jpg";
 import Yosemite from "./assets/Yosemite.jpg";
 import Sierra_Glacier from "./assets/Sierra_Nevada_Glacier.jpg"
+import Great_Flood from "./assets/Great_Flood.jpg";
+import CA_Coast from "./assets/CA_Coast.jpg";
+import Port_LA from "./assets/Port_LA.jpg";
+import Port_LB from "./assets/Port_LB.png";
 
 
 const mapSlides = [
@@ -577,7 +581,120 @@ export default function EarthProcesses() {
 
       <section id="fluvial" className="earth-section">
         <h2>Fluvial Processes, Oceans, and Coastlines</h2>
-        <p>Placeholder content for Fluvial Processes, Oceans, and Coastlines.</p>
+
+        <section className="flood-section">
+          <div className="fluvial-copy">
+            <h3>Flooding & Natural Hazards</h3>
+
+            <p>
+              Over the past 60 years, California has experienced 30 major floods. 
+              One of the largest floods in California was the Great Flood of 1862. 
+              The flood was a result of intense rainfall in the west coast which 
+              then was followed by the Columbia River creating a flood equivalent 
+              to 10 feet of precipitation. The storm caused $100 million dollars 
+              in damages, roughly equal to $3 billion today.
+            </p>
+
+            <p>
+              California is not traditionally known for common occurrences of tsunamis 
+              and hurricanes. However, in 1964, a 9.2 magnitude earthquake in Alaska 
+              sent a tsunami down south through the Pacific Ocean. The majority of the 
+              impact was felt in Crescent City and the tsunami resulted in 13 deaths.
+            </p>
+          </div>
+
+          <div className="fluvial-media">
+            <img src={Great_Flood} alt="Great Flood of 1862" />
+            <p className="caption">
+              Great Flood of 1862, a devastating flood in California's history
+            </p>
+          </div>
+        </section>
+
+        <section className="coast-section">
+          <div className="fluvial-copy">
+            <h3>Coastlines, Oceans & Islands</h3>
+
+            <p>
+              California’s coastline extends the entire length of the state, 
+              stretching approximately 840 miles. The coastline is highly irregular 
+              with different features such as sandy beaches, rocky cliffs, bays and 
+              estuaries, and coastal wetlands. Two important bays include the San 
+              Francisco Bay and the Monterey Bay. 
+            </p>
+
+            <p>
+              The San Francisco Bay covers roughly 400-500 square miles and the bay’s 
+              wetlands and mudflats provide critical habitat for migratory birds, fish, 
+              and marine mammals. The most famous island in this bay is Alcatraz Island. 
+              The Monterey Bay opens up to the Pacific Ocean and includes diverse habitats 
+              such as kelp forests, estuaries, and deep-sea environments. Since the
+              early 19th century, Monterey Bay has been central to California's coastal 
+              economy.
+            </p>
+
+            <p>
+              The California Current flows southward along the west coast. Some of the 
+              effects of that current brings cool water from Alaska and creates coastal 
+              fog. It’s also responsible for the moderate temperatures found year-round 
+              in California. Some of the positive impacts include a strong fishing industry, 
+              tourism, and major shipping access. Some of the negative impacts include 
+              coastal erosion, which continually erodes the coastal cliffs, and the 
+              increased risk of tsunamis and flooding.
+            </p>
+
+            <p>
+              The most famous island off the coast of California is the Channel Islands. 
+              The islands are home to diverse marine life due to the island’s location 
+              of  where cold and warm ocean currents meet. The Channel Islands also 
+              provide great tourism and support marine research in the local area. 
+              Along with these, the biggest important is the conservation areas, 
+              which are helping to sustain marine wildlife and protect the islands 
+              for future generations.
+            </p>
+          </div>
+
+          <div className="fluvial-media">
+            <img src={CA_Coast} alt="California Coastline" />
+            <p className="caption">
+              California Coastline, a view of the diverse coastal landscape
+            </p>
+          </div>
+        </section>
+
+        <section className="trade-section">
+          <div className="fluvial-copy">
+            <h3>Trade Routes & Transportation</h3>
+
+            <p>
+              California’s unique location as a coastal state allows for access to 
+              both land and sea trade routes. Major land trade routes include many 
+              Interstate Routes including I-5, I-10, I-40, and the I-80. These 
+              Interstates connect California to the rest of the United States and 
+              allows for local trade throughout the country. Along with land routes, 
+              the Pacific Ocean allows for trade access to South America and East Asia. 
+              The Port of Los Angeles and Port of Long Beach are the largest ports 
+              in California and facilitate more than $300 billion in trade annually.
+            </p>
+
+          </div>
+
+          <div className="trade-media">
+            <div className="trade-image">
+              <img src={Port_LA} alt="Port of Los Angeles" />
+              <p className="caption">
+                Port of Los Angeles, a major hub for international trade
+              </p>
+            </div>
+
+            <div className="trade-image">
+              <img src={Port_LB} alt="Port of Long Beach" />
+              <p className="caption">
+                Port of Long Beach, a major hub for international trade
+              </p>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section id="climate" className="earth-section">

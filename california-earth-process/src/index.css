@@ -856,6 +856,95 @@ button:hover {
   padding: 40px 0;
 }
 
+/* ========================================
+   Fluvial Processes, Oceans & Coastlines
+======================================== */
+
+#fluvial {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.flood-section,
+.coast-section,
+.trade-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 40px;
+  align-items: start;
+}
+
+.fluvial-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fluvial-copy h3 {
+  margin: 0;
+  color: var(--deep-ocean);
+}
+
+.fluvial-copy p {
+  margin: 0;
+}
+
+.fluvial-media {
+  margin: 0;
+}
+
+.fluvial-media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 6 / 5;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Trade Section */
+
+.trade-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.trade-image {
+  margin: 0;
+}
+
+.trade-image img {
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+  display: block;
+
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+
+  transition: transform 0.3s ease;
+}
+
+.trade-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .flood-section,
+  .coast-section,
+  .trade-section {
+    grid-template-columns: 1fr;
+  }
+
+  .trade-media {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* =========================
    References
 ========================= */
