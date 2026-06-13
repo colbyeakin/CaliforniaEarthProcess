@@ -21,7 +21,10 @@ export default function References() {
     "U.S. Environmental Protection Agency. (n.d.). Feather and Sacramento rivers watersheds. https://www.epa.gov/sfbay-delta/feather-and-sacramento-rivers-watersheds",
     "Redwood Coast Tsunami Work Group. (n.d.). 1964 Great Alaska earthquake tsunami. https://rctwg.humboldt.edu/1964-great-alaska-earthquake-tsunami",
     "National Park Service. (n.d.). Currents and upwelling. U.S. Department of the Interior. https://www.nps.gov/chis/learn/nature/currents-upwelling.htm",
-    "Legislative Analyst's Office. (2022). California's flood management system (Report No. 4618). State of California. https://lao.ca.gov/Publications/Report/4618"
+    "Legislative Analyst's Office. (2022). California's flood management system (Report No. 4618). State of California. https://lao.ca.gov/Publications/Report/4618",
+    "NOAA National Centers for Environmental Information. (2022). California state climate summary 2022. National Oceanic and Atmospheric Administration. https://statesummaries.ncics.org/chapter/ca/",
+    "Fire Safety Research Institute. (n.d.). Southern California fires timeline report. UL Research Institutes. https://fsri.org/research-update/southern-california-fires-timeline-report",
+    "California Department of Fish and Wildlife. (n.d.). Conservation. State of California. https://wildlife.ca.gov/Conservation"
   ].sort();
   return (
     <div className="references">

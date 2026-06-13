@@ -28,6 +28,12 @@ import Great_Flood from "./assets/Great_Flood.jpg";
 import CA_Coast from "./assets/CA_Coast.jpg";
 import Port_LA from "./assets/Port_LA.jpg";
 import Port_LB from "./assets/Port_LB.png";
+import CA_Biomes from "./assets/CA_Biomes.jpg";
+import CA_Climate from "./assets/CA_Climate.png";
+import CA_Oak from "./assets/CA_Oak.jpg";
+import LA_Fires from "./assets/LA_Fires.jpg";
+import Salmon from "./assets/Salmon.jpg";
+
 
 
 const mapSlides = [
@@ -541,7 +547,7 @@ export default function EarthProcesses() {
 
         <section className="climate-section">
           <h3>Deserts, Wind, & Glacial Landscapes</h3>
-          <div className="climate-subsection">
+          <div>
             <p>
               The Mojave Desert extends throughout southeastern California and southern Nevada. 
               The desert contains Death Valley National Park, which is the hottest, driest, and 
@@ -699,7 +705,114 @@ export default function EarthProcesses() {
 
       <section id="climate" className="earth-section">
         <h2>Climate Controls, Biomes, and Climate Change</h2>
-        <p>Placeholder content for Climate Controls, Biomes, and Climate Change.</p>
+
+        {/* Climate & Weather Systems */}
+        <section className="climate-subsection">
+          <div className="climate-copy">
+            <h3>Climate & Weather Systems</h3>
+
+            <p>
+              California features a diverse and highly variable Mediterranean climate
+              which includes warm, dry summers and mild, wet winters. The state borders
+              the Pacific Ocean and is located primarily in the Ferrel Cell. Its location
+              brings year-round prevailing winds from the west and northeast. The North
+              Pacific high-pressure system sits off the coast of California. In the summer,
+              it expands, pushing storm systems north of the state.
+            </p>
+
+            <p>
+              Some of the severe weather that California experiences are wildfires,
+              droughts, and heat waves. One of the most recent severe weather events
+              was the 2025 Los Angeles Wildfires. The main two fires that caused the
+              most destruction were the Palisades and Eaton fires. These fires led
+              to 32 confirmed fatalities, widespread destruction, and large-scale
+              community impacts.
+            </p>
+          </div>
+
+          <div className="climate-media">
+            <figure className="climate-image-card">
+              <img src={LA_Fires} alt="Los Angeles Wildfires" />
+              <figcaption className="caption">
+                Los Angeles Wildfires, a devastating natural disaster in California
+              </figcaption>
+            </figure>
+
+            <figure className="climate-image-card">
+              <img src={CA_Climate} alt="California Climate Map" />
+              <figcaption className="caption">
+                California Climate Map showing the state's diverse climate zones
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* Ecosystems */}
+        <section className="climate-subsection">
+          <div className="climate-copy">
+            <h3>Ecosystems, Biomes & Biodiversity</h3>
+
+            <p>
+              California is a diverse state with many different biomes and ecosystems.
+              These include Chaparral, Temperate Coniferous Forest, Redwood Forest,
+              Grasslands, Desert, Alpine Ecosystems, Wetlands, and Coastal Ecosystems.
+            </p>
+
+            <p>
+              These environments support tourism, recreation, agriculture, and
+              conservation efforts throughout the state. Coastal, valley, mountain,
+              and desert regions each provide unique opportunities and challenges
+              for California's communities.
+            </p>
+          </div>
+
+          <div className="climate-media">
+            <figure className="climate-image-card">
+              <img src={CA_Biomes} alt="California Biomes Map" />
+              <figcaption className="caption">
+                California Biomes Map showing the state's major ecosystems
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* Native Plants & Wildlife */}
+        <section className="climate-subsection">
+          <div className="climate-copy">
+            <h3>Native Plants & Wildlife</h3>
+
+            <p>
+              California has a large and diverse selection of plants due to its
+              varied climates and ecosystems. Notable species include California
+              Oak, Toyon, California Sage, Elderberry, California Buckwheat,
+              and Manzanita. These plants have traditionally provided food,
+              medicine, building materials, and wildlife habitat.
+            </p>
+
+            <p>
+              Native animals include salmon, mule deer, elk, beaver, and native
+              pollinators. These species provide economic benefits through fishing,
+              agriculture, and ecotourism. California is also home to mountain lions,
+              black bears, rattlesnakes, scorpions, and black widow spiders.
+            </p>
+          </div>
+
+          <div className="climate-media climate-media-grid">
+            <figure className="climate-image-card">
+              <img src={CA_Oak} alt="California Oak Tree" />
+              <figcaption className="caption">
+                California Oak Tree
+              </figcaption>
+            </figure>
+
+            <figure className="climate-image-card">
+              <img src={Salmon} alt="Salmon" />
+              <figcaption className="caption">
+                Salmon, a native California species
+              </figcaption>
+            </figure>
+          </div>
+        </section>
       </section>
     </div>
   );

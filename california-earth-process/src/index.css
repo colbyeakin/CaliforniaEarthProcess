@@ -1014,3 +1014,85 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   Climate Controls, Biomes & Wildlife
+======================================== */
+
+#climate {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.climate-subsection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 40px;
+  align-items: start;
+}
+
+.climate-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.climate-copy h3 {
+  margin: 0;
+  color: var(--deep-ocean);
+}
+
+.climate-copy p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.climate-media {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.climate-image-card {
+  margin: 0;
+}
+
+.climate-image-card img {
+  width: 100%;
+  display: block;
+
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+
+  transition: transform 0.3s ease;
+}
+
+.climate-image-card img:hover {
+  transform: scale(1.02);
+}
+
+.climate-image-card .caption {
+  margin-top: 10px;
+}
+
+.climate-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .climate-subsection {
+    grid-template-columns: 1fr;
+  }
+
+  .climate-media-grid {
+    grid-template-columns: 1fr;
+  }
+}
